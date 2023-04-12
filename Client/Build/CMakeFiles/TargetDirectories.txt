@@ -1,0 +1,4 @@
+/opt/Havoc/Client/Build/CMakeFiles/Havoc.dir
+/opt/Havoc/Client/Build/CMakeFiles/edit_cache.dir
+/opt/Havoc/Client/Build/CMakeFiles/rebuild_cache.dir
+/opt/Havoc/Client/Build/CMakeFiles/Havoc_autogen.dir

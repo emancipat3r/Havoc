@@ -1,0 +1,27 @@
+              _______           _______  _______ 
+    │\     /│(  ___  )│\     /│(  ___  )(  ____ \
+    │ )   ( ││ (   ) ││ )   ( ││ (   ) ││ (    \/
+    │ (___) ││ (___) ││ │   │ ││ │   │ ││ │      
+    │  ___  ││  ___  │( (   ) )│ │   │ ││ │      
+    │ (   ) ││ (   ) │ \ \_/ / │ │   │ ││ │      
+    │ )   ( ││ )   ( │  \   /  │ (___) ││ (____/\
+    │/     \││/     \│   \_/   (_______)(_______/
+
+  	 pwn and elevate until it's done
+
+[INFO] Havoc Framework [Version: 0.4.1] [CodeName: The Fool]
+[INFO] Havoc profile: profiles/havoc.yaotl
+[INFO] Build: 
+ - Compiler x64 : data/x86_64-w64-mingw32-cross/bin/x86_64-w64-mingw32-gcc
+ - Compiler x86 : /usr/bin/i686-w64-mingw32-gcc
+ - Nasm         : /usr/bin/nasm
+[INFO] Time: 10/04/2023 20:46:56
+[INFO] Teamserver logs saved under: data/loot/10.04.2023_20:46:56
+[INFO] Starting Teamserver on ws://0.0.0.0:40056
+[INFO] Starting Teamserver service handler on ws://0.0.0.0:40056/service-endpoint
+[INFO] Opens existing database: data/havoc.db
+[INFO] Starting 1 listeners from last session
+[INFO] Started "1" listener: https://10.10.15.118:443
+[ERRO] Client [User: 5pider] failed to Authenticate! (127.0.0.1:56020)
+[GOOD] User <5pider> Authenticated
+[WARN] User <5pider> Disconnected

